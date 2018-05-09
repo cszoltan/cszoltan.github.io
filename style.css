@@ -1,0 +1,63 @@
+* {
+    font-family: consolas, courier;
+}
+header {
+    background-color: #333333;
+    width: 100%;
+}
+
+#wrapper {
+    
+    padding: 0% 10% 0% 10%;
+    text-align: right;
+    overflow: hidden;
+    height: 44px;
+}
+
+#nav {
+    margin: 10px 0px 10px 0px;
+}
+
+#icon {
+    float: left;
+    
+}
+
+body {
+    background-image: url("topography.png");
+    margin: 0 0 0 0;
+}
+
+#content {
+    padding: 40px 10% 0% 10%;
+}
+
+a,
+#subtitle {
+    color: #ff0099;
+}
+
+#subtitle {
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 20px;
+    margin: 10px 0px 40px 0px;
+}
+
+a {
+    margin-left: 30px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', courier;
+}
+
+h2, #separator {
+    text-align: center;
+    margin: 40px 0px 40px 0px;
+}
+
+#wiki {
+    font-size: 14px;
+}
