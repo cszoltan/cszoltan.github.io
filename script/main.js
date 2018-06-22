@@ -1,10 +1,11 @@
 'use strict';
 
 class Image {
-  constructor(path, description, title) {
+  constructor(path, description, title, active) {
     this.path = path;
     this.description = description;
     this.title = title;
+    this.active = active;
   }
 }
 
@@ -14,12 +15,12 @@ class Galery {
   }
 
   init() {
-    this.images.push(new Image('./img/african_savanna.jpg', 'It\'s a savanna', 'African Savanna'));
-    this.images.push(new Image('./img/agnel_lake_ceresole_reale.jpg', 'It\'s a lake', 'Agnel Lake'));
-    this.images.push(new Image('./img/selfjord_reflections.jpg', 'It\'s a fjord', 'Selfjord'));
-    this.images.push(new Image('./img/aurora_borealis_northern_lights_iceland.jpg', 'It\'s a light', 'Northern Light'));
-    this.images.push(new Image('./img/autumn_forest.jpg', 'It\'s a forest', 'Autumn Forest'));
-    this.images.push(new Image('./img/baltic_sea.jpg', 'It\'s a sea', 'Baltic Sea'));
+    this.images.push(new Image('./img/african_savanna.jpg', 'It\'s a savanna', 'African Savanna', true));
+    this.images.push(new Image('./img/agnel_lake_ceresole_reale.jpg', 'It\'s a lake', 'Agnel Lake', false));
+    this.images.push(new Image('./img/selfjord_reflections.jpg', 'It\'s a fjord', 'Selfjord', false));
+    this.images.push(new Image('./img/aurora_borealis_northern_lights_iceland.jpg', 'It\'s a light', 'Northern Light', false));
+    this.images.push(new Image('./img/autumn_forest.jpg', 'It\'s a forest', 'Autumn Forest', false));
+    this.images.push(new Image('./img/baltic_sea.jpg', 'It\'s a sea', 'Baltic Sea', false));
   }
 
   findImage(src) {
@@ -86,3 +87,27 @@ document.querySelector('#right').onclick = () => {
     document.querySelector('#textBox').innerHTML = `<h2>${galery.images[0].title}</h2><p>${galery.images[0].description}</p>`;
   }
 };
+
+document.querySelector('#left').addEventListener("mousedown", function(){
+  this.classList.add('pressed');
+}, false);
+
+document.querySelector('#left').addEventListener("mouseup", function(){
+  this.classList.remove('pressed');
+}, false);
+
+document.querySelector('#left').addEventListener("mouseleave", function(){
+  this.classList.remove('pressed');
+}, false);
+
+document.querySelector('#right').addEventListener("mousedown", function(){
+  this.classList.add('pressed');
+}, false);
+
+document.querySelector('#right').addEventListener("mouseup", function(){
+  this.classList.remove('pressed');
+}, false);
+
+document.querySelector('#right').addEventListener("mouseleave", function(){
+  this.classList.remove('pressed');
+}, false);
