@@ -1,0 +1,47 @@
+#thumbnail{
+  display:flex;
+  justify-content: center;
+}
+
+#main-image{
+    display:flex;
+    justify-content: center;
+}
+
+.thumbnail-content{
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.main-image-content{
+  width: 800px;
+  height: 450px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.thumbnail-content img{
+  height: 100%;
+}
+
+.main-image-content img{
+  width: 100%;
+}
+
+#textBox{
+  display: inline-block;
+  position: absolute;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+  bottom: 0;
+  left: 0;
+}
